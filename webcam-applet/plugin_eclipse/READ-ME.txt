@@ -1,0 +1,24 @@
+About
+The Fat Jar Eclipse Plug-In is a Deployment-Tool which deploys an Eclipse java-project into one executable jar.
+
+It adds the Entry "Build Fat-JAR" to the Export-Wizard.
+In addition to the eclipse standard jar-exporter referenced classes and jars are included to the "Fat-Jar", so the resulting jar contains all needed classes and can be executed directly with "java -jar", no classpath has to be set, no additional jars have to be deployed.
+
+Jars, External-Jars, User-Libraries, System-Libraries, Classes-Folders and Project-Exports are considered by the plugin.
+The Main-Class can be selected and Manifest-files are merged.
+The One-JAR option integrates a specialised Class-Loader written by Simon Tuffs ( http://one-jar.sourceforge.net/ ) which handles jar-files inside a jar.
+Individual files and folders can be excluded or added to the jar.
+Different settings can be stored and re-executed as "Quick Build" via the context-menu.
+top
+
+
+How To Install
+The zip file contains the plugin directory. Unzip from within the Eclipse directory.
+Stop eclipse.
+Start eclipse from the command-line with the clean option "eclipse -clean",
+otherwise the plugin will not be found.
+
+To uninstall, remove the net.sf.fjep.fatjar_x.x.x (where x.x.x
+denotes the version of the plugin you have installed). 
+
+
