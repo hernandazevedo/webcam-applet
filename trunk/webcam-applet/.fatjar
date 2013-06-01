@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri May 31 14:49:15 GMT-03:00 2013
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=webcam-applet_fat.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

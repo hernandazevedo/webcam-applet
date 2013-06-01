@@ -1,0 +1,26 @@
+
+#Aqui rodar apenas uma vez para gerar o arquivo jks
+keytool -genkey -alias example -keystore keystore_montreal.jks -keypass test1234 -storepass test1234
+
+#Para cada compilação do jar com o plugin fatjar, devemos deletar o arquivo java.policy dentro do jar e fazer o comando abaixo.
+jarsigner -keystore keystore_montreal.jks -storepass test1234 -keypass test1234 webcam-applet_fat.jar example
+
+
+#Como exportar o certificado para instalar no server
+keytool -export -keystore keystore_montreal.jks -storepass test1234 -alias example -file certificate_montreal.cer
+
+#Importar no server para gerar o arquivo examplestore
+keytool -import -alias example -file certificate_montreal.cer -keystore examplestore -storepass test1234
+
+
+### java.policy file na pasta do home usuario
+
+/* AUTOMATICALLY GENERATED ON Sat Jun 01 13:56:54 GMT-03:00 2013*/
+/* DO NOT EDIT */
+
+keystore "file://C:/Users/Hernand/examplestore", "jks";
+
+grant signedBy "example" {
+  permission java.security.AllPermission;
+};
+
