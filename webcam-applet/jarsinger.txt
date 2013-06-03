@@ -10,7 +10,7 @@ jarsigner -keystore keystore_montreal.jks -storepass test1234 -keypass test1234 
 keytool -export -keystore keystore_montreal.jks -storepass test1234 -alias example -file certificate_montreal.cer
 
 #Importar no server para gerar o arquivo examplestore
-keytool -import -alias example -file certificate_montreal.cer -keystore examplestore -storepass test1234
+keytool -import -alias example -file certificate_montreal.cer -keystore examplestore.jks -storepass test1234
 
 
 ### java.policy file na pasta do home usuario
