@@ -47,7 +47,7 @@ public class WebcamAppletExample extends JApplet implements ActionListener{
 		URL url;
 		try {
 			//FIXME pegar a o protocol + server + port + contextPath abaixo dos parameters 
-			url = new URL("http://localhost:8083/VisitanteSeap/"+servlet);
+			url = new URL("http://localhost:8083/TesteBanco/"+servlet);
 		
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setDoOutput(true);
